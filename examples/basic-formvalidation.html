@@ -8,13 +8,12 @@
   </head>
   <body>
     <div class='container'>
-		
-		<div class="col-xs-12">
+
 			<section id="wizard">
 			  <div class="page-header">
 	            <h1>Wizard With Form Validation</h1>
 	          </div>
-	
+
 				<div id="rootwizard">
 					<div class="navbar">
 					  <div class="navbar-inner">
@@ -64,9 +63,9 @@
 							<li class="next last" style="display:none;"><a href="#">Last</a></li>
 						  	<li class="next"><a href="#">Next</a></li>
 						</ul>
-					</div>	
+					</div>
 				</div>
-				
+
 <h3>HTML</h3>
 <pre class="prettyprint linenums">
 &lt;div id="rootwizard">
@@ -118,7 +117,7 @@
 			&lt;li class="next last" style="display:none;">&lt;a href="#">Last&lt;/a>&lt;/li>
 		  	&lt;li class="next">&lt;a href="#">Next&lt;/a>&lt;/li>
 		&lt;/ul>
-	&lt;/div>	
+	&lt;/div>
 &lt;/div>
 </pre>
 
@@ -134,10 +133,10 @@ $(document).ready(function() {
 					return false;
 				}
 			}
-			
+
 			// Set the name for the next tab
 			$('#tab3').html('Hello, ' + $('#name').val());
-			
+
 		}, onTabShow: function(tab, navigation, index) {
 			var $total = navigation.find('li').length;
 			var $current = index+1;
@@ -145,10 +144,9 @@ $(document).ready(function() {
 			$('#rootwizard').find('.bar').css({width:$percent+'%'});
 		}});
 });
-</pre>	
-				
+</pre>
+
 			</section>
- 		</div>
 	</div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="../bootstrap/js/bootstrap.min.js"></script>
@@ -165,18 +163,18 @@ $(document).ready(function() {
 						return false;
 					}
 				}
-				
+
 				// Set the name for the next tab
 				$('#tab3').html('Hello, ' + $('#name').val());
-				
+
 			}, onTabShow: function(tab, navigation, index) {
 				var $total = navigation.find('li').length;
 				var $current = index+1;
 				var $percent = ($current/$total) * 100;
 				$('#rootwizard').find('.bar').css({width:$percent+'%'});
-			}});	
+			}});
 		window.prettyPrint && prettyPrint()
-	});	
+	});
 	</script>
   </body>
 </html>
